@@ -307,7 +307,7 @@ RUN if [ ${INSTALL_OCI8} = true ]; then \
     ln -s /usr/local/instantclient/libclntsh.so.12.1 /usr/local/instantclient/libclntsh.so && \
     export LD_LIBRARY_PATH=/usr/local/instantclient && \
     echo 'instantclient,/usr/local/instantclient' | pecl install oci8 && \
-    cp /tmp/oci8.ini /etc/php/5.6/cli/conf.d/oci8.ini \
+    cp /tmp/oci8.ini /etc/php/${LARADOCK_PHP_VERSION}/cli/conf.d/oci8.ini \
 ;fi
 
 ###########################################################################
